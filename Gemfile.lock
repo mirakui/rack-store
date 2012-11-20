@@ -1,0 +1,25 @@
+PATH
+  remote: .
+  specs:
+    rack-store (0.0.1)
+      rack (>= 1.2.0)
+
+GEM
+  specs:
+    diff-lcs (1.1.3)
+    rack (1.4.1)
+    rspec (2.12.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+    rspec-core (2.12.0)
+    rspec-expectations (2.12.0)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.12.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack-store!
+  rspec (>= 2.0.0)
