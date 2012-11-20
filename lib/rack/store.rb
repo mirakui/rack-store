@@ -8,9 +8,6 @@ module Rack
       self.class.env = env
       self.class.cache = {}
       @app.call(env)
-    ensure
-      self.class.env = {}
-      self.class.cache = {}
     end
 
     class << self
