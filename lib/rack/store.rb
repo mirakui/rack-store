@@ -6,7 +6,6 @@ module Rack
 
     def call(env)
       self.class.env = env
-      self.class.cache = {}
       @app.call(env)
     end
 
@@ -17,14 +16,6 @@ module Rack
 
       def env=(env)
         @env = env
-      end
-
-      def cache
-        @cache ||= {}
-      end
-
-      def cache=(cache)
-        @cache = cache
       end
     end
   end
