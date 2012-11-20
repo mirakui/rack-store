@@ -3,6 +3,9 @@ Rack::Store is a Rack middleware what makes the env accessible anywhere while a 
 
 # Usage
 ```ruby
+# Gemfile
+gem 'rack-store', :require => 'rack/store'
+
 # config.ru
 use Rack::Store
 
