@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name              = 'rack-store'
-  spec.version           = '0.0.2'
+  spec.version           = '0.0.3'
   spec.summary           = 'A Rack middleware what makes the env accessible anywhere while a request'
   spec.description       = 'Rack::Store is a Rack middleware what makes the env accessible anywhere while a request'
   spec.files             = Dir.glob("lib/**/*.rb")
