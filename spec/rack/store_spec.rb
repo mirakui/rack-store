@@ -26,6 +26,14 @@ describe Rack::Store do
       request '/hello?key=value1'
       request '/hello?key=value2'
     end
-    it { Rack::Store.env['QUERY_STRING'] == 'key=value2' }
+    it { Rack::Store.env['QUERY_STRING'].should == 'key=value2' }
+  end
+
+  context 'multithread' do
+    before do
+      request '/hello?key=value'
+      Thread.new { request '/hello?key=value2' }.join
+    end
+    it { Rack::Store.env['QUERY_STRING'].should == 'key=value' }
   end
 end
