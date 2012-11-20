@@ -17,6 +17,9 @@ module Rack
 
       def env=(env)
         @env ||= {}
+        unless @env.has_key?(Thread.current.object_id)
+          ObjectSpace.define_finalizer Thread.current, lambda {|thread_id| @env.delete thread_id }
+        end
         @env[Thread.current.object_id] = env
       end
     end

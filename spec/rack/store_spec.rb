@@ -34,6 +34,11 @@ describe Rack::Store do
       request '/hello?key=value'
       Thread.new { request '/hello?key=value2' }.join
     end
+    subject { Rack::Store.env }
     it { Rack::Store.env['QUERY_STRING'].should == 'key=value' }
+    it do
+      GC.start
+      Rack::Store.instance_variable_get(:@env).keys.length.should == 1
+    end
   end
 end
