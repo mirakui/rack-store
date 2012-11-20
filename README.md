@@ -6,7 +6,7 @@ Rack::Store is a Rack middleware what makes the env accessible anywhere while a 
 # config.ru
 use Rack::Store
 
-# In your rack application (e.g., Rails, Sinatra)
+# In your rack application (e.g. Rails, Sinatra)
 Rails.logger.debug "User-Agent: #{Rack::Store.env['HTTP_USER_AGENT']}"
 ```
 
