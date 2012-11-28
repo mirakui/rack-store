@@ -8,10 +8,10 @@ module ActiveSupport
     class RackStore < Store
       RACK_STORE_ENV_KEY = 'rack_store.cache'
 
-      delegate *%w[clear cleanup prune pruning?
-        inspect increment decrement
-        delete_matched synchronize
-        read write fetch], :to => :store
+      delegate :clear, :cleanup, :prune, :pruning?,
+        :inspect, :increment, :decrement,
+        :delete_matched, :synchronize,
+        :read, :write, :fetch, :to => :store
 
       def initialize(*options)
         @cache_store_options = options
