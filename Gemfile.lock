@@ -5,6 +5,7 @@ PATH
       rack (>= 1.2.0)
 
 GEM
+  remote: http://rubygems.org/
   specs:
     diff-lcs (1.1.3)
     rack (1.4.1)
@@ -23,4 +24,3 @@ PLATFORMS
 DEPENDENCIES
   rack-store!
   rspec (>= 2.0.0)
-  rspec-core (>= 2.0.0)
