@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mirakui/rack-store.png)](https://travis-ci.org/mirakui/rack-store)
+
 # What's Rack::Store
 Rack::Store is a Rack middleware what makes the env accessible anywhere while a request.
 
