@@ -38,6 +38,7 @@ describe Rack::Store do
     it { Rack::Store.env['QUERY_STRING'].should == 'key=value' }
     it do
       GC.start
+      Rack::Store.cleanup_garbage_keys
       Rack::Store.instance_variable_get(:@env).keys.length.should == 1
     end
   end
