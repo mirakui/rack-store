@@ -10,5 +10,6 @@ Gem::Specification.new do |spec|
   spec.has_rdoc          = false
   spec.add_dependency 'rack', '>= 1.2.0'
   spec.add_dependency 'activesupport', '>= 3.2.8'
-  spec.add_development_dependency 'rspec', '>= 2.0.0'
+  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'appraisal', '~> 2.1'
 end

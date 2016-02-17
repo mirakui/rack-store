@@ -16,9 +16,9 @@ describe Rack::Store do
 
   describe '#env' do
     before { request '/hello?key=value' }
-    subject { Rack::Store.env }
-    its(['PATH_INFO']) { should == '/hello' }
-    its(['QUERY_STRING']) { should == 'key=value' }
+    let(:env) { Rack::Store.env }
+    it { expect(env['PATH_INFO']).to eq '/hello' }
+    it { expect(env['QUERY_STRING']).to eq 'key=value' }
   end
 
   context 'called twice' do
@@ -34,7 +34,7 @@ describe Rack::Store do
       request '/hello?key=value'
       Thread.new { request '/hello?key=value2' }.join
     end
-    subject { Rack::Store.env }
+
     it { Rack::Store.env['QUERY_STRING'].should == 'key=value' }
     it do
       GC.start
