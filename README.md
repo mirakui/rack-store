@@ -19,4 +19,4 @@ Rails.logger.debug "User-Agent: #{Rack::Store.env['HTTP_USER_AGENT']}"
 Rack::Store is released under the MIT license:
 * www.opensource.org/licenses/MIT
 
-Copyright (c) 2012 Issei Naruta
+Copyright (c) 2016 Issei Naruta
